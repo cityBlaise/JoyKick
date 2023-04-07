@@ -217,7 +217,7 @@
               />
             </svg>
           </button>
-          <ul class="invisible opacity-0 absolute text-slate-800/50 z-10 font-semibold top-100 right-0 grid gap-1 w-32 text-sm py-2 rounded-md shadow-md shadow-pink-100/20  bg-white lg:visible lg:p-0 lg:flex lg:gap-4 lg:opacity-100 lg:w-auto lg:static lg:bg-inherit lg:shadow-none lg:text-slate-500">
+          <ul style="z-index: 20;" class="invisible opacity-0 absolute text-slate-800/50 z-10 font-semibold top-100 right-0 grid gap-1 w-32 text-sm py-2 rounded-md shadow-md shadow-pink-100/20  bg-white lg:visible lg:p-0 lg:flex lg:gap-4 lg:opacity-100 lg:w-auto lg:static lg:bg-inherit lg:shadow-none lg:text-slate-500">
             <a class="px-4 py-2 hover:bg-slate-200/80 hover:text-gray-900 hover:transition hover:duration-200 lg:rounded-xl lg:hover:bg-purple-200" href="#">product</a>
             <a class="px-4 py-2 hover:bg-slate-200/80 hover:text-gray-900 hover:transition hover:duration-200 lg:rounded-xl lg:hover:bg-purple-200" href="#">contact us</a>
             <a class="px-4 py-2 hover:bg-slate-200/80 hover:text-gray-900 hover:transition hover:duration-200 lg:rounded-xl lg:hover:bg-purple-200" href="#">cart</a>
@@ -339,6 +339,7 @@
             <div class="c absolute top-0"></div>
             <div style="z-index: -2;" class="c absolute invisible opacity-0 top-0 inset-0 bg-purple-300/5 blur-xl rounded-full aspect-square -translate-y-6  "></div>
             <img
+            style="z-index: -10;"
               class="opacity-0 invisible translate-x-28 max-w-full  aspect-square object-contain xs:object-none xs:aspect-auto xs:w-70 xs:mt-14 lg:aspect-square lg:mt-0"
               src="./assets/joystick.png"
               alt=""
@@ -365,9 +366,35 @@
     let dropDown = document.querySelector('nav ul')
     console.log(btnMenu);
     const handleClick=(e)=>{
-        dropDown.classList.toggle('invisible')
-        dropDown.classList.toggle('opacity-0')
-        enqueued=true
+      if(dropDown.classList.contains('invisible')){
+
+      dropDown.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible', 
+                } 
+            ],
+            {
+                duration:500, 
+                fill:'forwards'
+            }) 
+        
+      }else{
+        dropDown.animate([
+                {
+                    opacity:'0',
+                    visibility:'hidden', 
+                } 
+            ],
+            {
+                duration:500, 
+                fill:'forwards'
+            }) 
+      }
+      setTimeout(()=>{
+      dropDown.classList.toggle('invisible')
+      dropDown.classList.toggle('opacity-0')
+      },1000)
     }
     btnMenu.addEventListener('click',handleClick,false)
     btnMenu.addEventListener('blur',handleClick,false)
