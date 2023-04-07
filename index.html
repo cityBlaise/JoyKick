@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JoyKick</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script>
+ 
+     const placeContent=()=>{
+        let c1= document.querySelector('.c:nth-of-type(1)')
+        let c2= document.querySelector('.c:nth-of-type(2)')
+        let c3= document.querySelector('.c:nth-of-type(3)')
+        let nav= document.querySelector('header')
+        document.querySelector('.main').animate([
+            {
+                opacity:'1',
+                visibility:'visible',
+                
+            }],{
+            duration:2000, 
+            fill:"forwards", 
+        })
+        
+        document.querySelector('.main').animate([
+            {
+                filter:'blur(0)',
+                
+            }],{
+            duration:1000, 
+            delay: 2000, 
+            fill:"forwards", 
+        })
+
+        console.log(nav);
+        nav.animate([
+            {
+                opacity:'1',
+                visibility:'visible'
+            }
+        ],{
+            duration:4000, 
+            fill:"forwards", 
+        })
+        if(window.screen.width<430){
+            c1.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translate(-60px,-30px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 5000, 
+                fill:'forwards'
+            })  
+            c2.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translate(40px,10px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 6000, 
+                fill:'forwards'
+            })  
+    
+            let img= document.querySelector('img')
+            img.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translateX(0px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 7000, 
+                fill:'forwards'
+            })  
+
+        }else if(window.screen.width>=430 && window.screen.width<1024){
+            c1.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translate(-80px,-5px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 5000, 
+                fill:'forwards'
+            })  
+            c2.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translate(70px,40px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 6000, 
+                fill:'forwards'
+            })  
+    
+            let img= document.querySelector('img')
+            img.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translateX(0px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 7000, 
+                fill:'forwards'
+            })  
+
+        }else{ 
+            c3.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible', 
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 4000, 
+                fill:'forwards'
+            })  
+            c1.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translate(-80px,-115px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 5000, 
+                fill:'forwards'
+            })  
+            c2.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translate(70px,85px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 6000, 
+                fill:'forwards'
+            })  
+    
+            let img= document.querySelector('img')
+            img.animate([
+                {
+                    opacity:'1',
+                    visibility:'visible',
+                    transform:'translateX(0px)',
+                } 
+            ],
+            {
+                duration:1000,
+                delay: 7000, 
+                fill:'forwards'
+            })  
+
+         
+        }
+
+
+        
+    }
+
+    window.addEventListener('load',placeContent)
+  </script>
+  <body>
+<div class="2xl:max-w-7xl 2xl:mx-auto main">
+    <header class="opacity-0 invisible flex capitalize flex-row justify-between items-center p-6 lg:py-3">
+        <div class="font-engine text-xl">JoyKick</div>
+        <nav class="relative ">
+          <button class="focus:ring-1 focus:ring-slate-400/20 p-2 mb-1 rounded-full hover:bg-slate-400/20 hover:transition hover:duration-200 lg:hidden">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <ul class="invisible opacity-0 absolute text-slate-800/50 z-10 font-semibold top-100 right-0 grid gap-1 w-32 text-sm py-2 rounded-md shadow-md shadow-pink-100/20  bg-white lg:visible lg:p-0 lg:flex lg:gap-4 lg:opacity-100 lg:w-auto lg:static lg:bg-inherit lg:shadow-none lg:text-slate-500">
+            <a class="px-4 py-2 hover:bg-slate-200/80 hover:text-gray-900 hover:transition hover:duration-200 lg:rounded-xl lg:hover:bg-purple-200" href="#">product</a>
+            <a class="px-4 py-2 hover:bg-slate-200/80 hover:text-gray-900 hover:transition hover:duration-200 lg:rounded-xl lg:hover:bg-purple-200" href="#">contact us</a>
+            <a class="px-4 py-2 hover:bg-slate-200/80 hover:text-gray-900 hover:transition hover:duration-200 lg:rounded-xl lg:hover:bg-purple-200" href="#">cart</a>
+            <a class="px-4 py-2 hover:bg-slate-200/80 hover:text-gray-900 hover:transition hover:duration-200 lg:rounded-xl lg:hover:bg-purple-200" href="#">orders</a>
+          </ul>
+        </nav>
+      </header>
+      <main class="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:items-center lg:px-6 lg:max-w-5xl lg:mx-auto">
+        <div class="grid gap-6 mx-auto w-4/5 sm:gap-8 md:max-w-2xl lg:mx-0 lg:w-auto">
+            <div class="font-engine flex flex-col gap-3 text-slate-400/90 sm:flex-row sm:flex-wrap">
+              <div class="font-engine fw-bold uppercase tracking-tight text-blue-400/50 sm:w-full sm:text-xl">
+                first allexclusive
+              </div>
+             <span class="first-letter:uppercase text-5xl">elegance</span> 
+              <span class="first-letter:uppercase text-5xl">walking in </span>
+              <span class="first-letter:uppercase text-5xl">gaming</span>  
+          </div>
+          <div class=" first-letter:uppercase text-indigo-300/50    sm:text-xl ">
+            high-quality joysticks for all types of gaming consoles &
+            <span>Personal computers</span>.
+            <span>Don't miss out on this.</span>
+          </div>
+          <div class="grid gap-2 text-gray-200/80 xs:grid-cols-2   sm:text-xl">
+            <div class="flex gap-2 py-2 rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6 fill-blue-400/90"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="first-letter:uppercase"> first all-exclusive </span>
+            </div>
+            <div class="flex gap-2 py-2 rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6 fill-blue-400/90"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="first-letter:uppercase">goes to all devices</span>
+            </div>
+            <div class="flex gap-2 py-2 rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 fill-blue-400/90"
+              >
+                <path
+                  d="M10.5213 2.62368C11.3147 1.75255 12.6853 1.75255 13.4787 2.62368L14.4989 3.74391C14.8998 4.18418 15.4761 4.42288 16.071 4.39508L17.5845 4.32435C18.7614 4.26934 19.7307 5.23857 19.6757 6.41554L19.6049 7.92905C19.5771 8.52388 19.8158 9.10016 20.2561 9.50111L21.3763 10.5213C22.2475 11.3147 22.2475 12.6853 21.3763 13.4787L20.2561 14.4989C19.8158 14.8998 19.5771 15.4761 19.6049 16.071L19.6757 17.5845C19.7307 18.7614 18.7614 19.7307 17.5845 19.6757L16.071 19.6049C15.4761 19.5771 14.8998 19.8158 14.4989 20.2561L13.4787 21.3763C12.6853 22.2475 11.3147 22.2475 10.5213 21.3763L9.50111 20.2561C9.10016 19.8158 8.52388 19.5771 7.92905 19.6049L6.41553 19.6757C5.23857 19.7307 4.26934 18.7614 4.32435 17.5845L4.39508 16.071C4.42288 15.4761 4.18418 14.8998 3.74391 14.4989L2.62368 13.4787C1.75255 12.6853 1.75255 11.3147 2.62368 10.5213L3.74391 9.50111C4.18418 9.10016 4.42288 8.52388 4.39508 7.92905L4.32435 6.41553C4.26934 5.23857 5.23857 4.26934 6.41554 4.32435L7.92905 4.39508C8.52388 4.42288 9.10016 4.18418 9.50111 3.74391L10.5213 2.62368Z"
+                  stroke="transparent"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M9 12L11 14L15 10"
+                  stroke="#000000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="first-letter:uppercase">4 years guarantee</span>
+            </div>
+            <div class="flex gap-2 py-2 rounded-md">
+              <svg
+              class="w-6 h-6 fill-blue-400/90"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="invisible_box" data-name="invisible box">
+                      <rect width="20" height="20" fill="none"></rect>
+                    </g>
+                    <g id="Health_Icons" data-name="Health Icons">
+                      <g>
+                        <path
+                          d="M37.7,11.1A3,3,0,0,0,35.4,10H34.2l.3-1.7A3.1,3.1,0,0,0,33.9,6a3.2,3.2,0,0,0-2.2-1H7.8a2,2,0,0,0,0,4H30.3l-4,22.9a6.8,6.8,0,0,0-1,2.1H20.7A7,7,0,0,0,7.3,34H6.2l.5-2.9a2,2,0,0,0-1.6-2.3,2,2,0,0,0-2.3,1.6L2,34.7A2.8,2.8,0,0,0,2.7,37a2.8,2.8,0,0,0,2.1,1H7.3a7,7,0,0,0,13.4,0h4.6a7,7,0,0,0,13.4,0h2a3.2,3.2,0,0,0,3.1-2.7L46,22.5ZM14,39a3,3,0,0,1-3-3,3,3,0,0,1,6,0A3,3,0,0,1,14,39ZM33.5,14h1.3l5.9,8H32.1ZM32,39a3,3,0,0,1-3-3,3,3,0,0,1,6,0A3,3,0,0,1,32,39Zm8-5H38.7A7,7,0,0,0,32,29H30.9l.5-3.1h9.9Z"
+                        ></path>
+                        <path d="M4,15H14a2,2,0,0,0,0-4H4a2,2,0,0,0,0,4Z"></path>
+                        <path
+                          d="M15,19a2,2,0,0,0-2-2H5a2,2,0,0,0,0,4h8A2,2,0,0,0,15,19Z"
+                        ></path>
+                        <path d="M6,23a2,2,0,0,0,0,4h6a2,2,0,0,0,0-4Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <span class="first-letter:uppercase">free express shipping</span>
+            </div>
+          </div>
+          <div style="word-spacing: -4px;" class="flex justify-around gap-7 my-8 text-xl uppercase font-engine sm:text-3xl">
+              <span  class="p-2 cursor-pointer relative text-green-300/80">buy now <i style="height: 2px;" class="absolute bottom-0 left-0 bg-green-500 w-full translate-y-1 blur-sm "></i></span>
+              <span class="p-2 cursor-pointer relative text-gray-200/60">review product <i style="height: 2px;" class="absolute bottom-0 left-0 bg-gray-500 w-full translate-y-1 blur-sm "></i></span>
+          </div>
+        </div>
+        <div class="order-first h-3/4 xs:mb-8 lg:order-none lg:h-3/4 ">
+          <div class="h-full flex flex-col items-center justify-center relative lg:flex-row lg:items-center ">
+            <div class="c absolute bottom-0"></div>
+            <div class="c absolute top-0"></div>
+            <div style="z-index: -2;" class="c absolute invisible opacity-0 top-0 inset-0 bg-purple-300/5 blur-xl rounded-full aspect-square -translate-y-6  "></div>
+            <img
+              class="opacity-0 invisible translate-x-28 max-w-full  aspect-square object-contain xs:object-none xs:aspect-auto xs:w-70 xs:mt-14 lg:aspect-square lg:mt-0"
+              src="./assets/joystick.png"
+              alt=""
+            />
+            <span
+              class="bg-white absolute rounded-full blur-sm bottom-0 h-1 w-1  mr-2 xs:-bottom-7 lg:bottom-20"
+            ></span>
+          </div>
+        </div>
+      </main>
+      <footer class="uppercase   text-white/60 w-4/5 font-engine text-lg grid place-items-start grid-cols-3  mx-auto pb-3  mt-4 gap-4 sm:text-2xl sm:mt-10 md:max-w-2xl lg:grid-flow-col lg:gap-10">
+        <div class="w-full">abper</div>
+        <div class="w-full">evianto</div>
+        <div class="w-full">agillian</div>
+        <div class="w-full">morgia</div>
+        <div class="w-full">Blogkio</div>
+        <div class="w-full">barney</div>
+      </footer>
+</div>
+    <div class="overlay-black"></div>
+  </body>
+  <script defer>
+    let btnMenu = document.querySelector('nav button')
+    let dropDown = document.querySelector('nav ul')
+    console.log(btnMenu);
+    const handleClick=(e)=>{
+        dropDown.classList.toggle('invisible')
+        dropDown.classList.toggle('opacity-0')
+        enqueued=true
+    }
+    btnMenu.addEventListener('click',handleClick,false)
+    btnMenu.addEventListener('blur',handleClick,false)
+    let enqueued = false;
+    function expensiveOperation(e) {
+        console.log('Invoked at'); 
+    }
+    
+
+    // const myf=(e)=>{
+    //     if(!enqueued){
+    //         e.preventDefault()
+    //         e.stopPropagation() 
+    //         window.scrollTo(0,0)
+    //         console.log('yo');
+    //     }else{
+    //         console.log('removed!');
+    //         window.removeEventListener('touchstart', myf, {passive:false});
+    //         window.removeEventListener('touchmove', myf, {passive:false});
+    //         window.removeEventListener('scroll', myf, {passive:false});
+    //         window.removeEventListener('wheel', myf, {passive:false});
+    //     }
+    // }
+
+    // window.addEventListener('scroll', myf, {passive:false});
+    // window.addEventListener('touchstart', myf, {passive:false});
+    // window.addEventListener('touchmove', myf, {passive:false});
+    // window.addEventListener('wheel', myf, {passive:false});
+    
+   
+  </script>
+</html>
